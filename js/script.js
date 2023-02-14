@@ -1,35 +1,27 @@
 "use srtict";
 
-const yearOfBirth = 2006;
-console.log(yearOfBirth);
-
-class User {
-  // Деструктуризуємо об'єкт
-  constructor({ name, email }) {
-    this.name = name;
-    this.email = email;
+const number = 10;
+let string = "";
+for (let i = 0; i < number; i += 1) {
+  if (i % 2 === 0) {
+    continue;
   }
+  console.log(string += i);
+  console.log("Непарне i: ", i); // 1, 3, 5, 7, 9
+}
+console.log(string.split('').join(', '));
+
+const numbers = [1, 3, 14, 18, 4, 7, 29, 6, 34];
+const threshold = 15;
+for (const number of numbers) {
+  if (number < threshold) {
+    continue;
+  }
+
+  console.log(`Число більше за ${threshold}: ${number}`); // 18, 29, 34
 }
 
-const mango = new User({
-  name: "Манго",
-  email: "mango@mail.com",
-});
-console.log(mango);
 
-console.log("JavaScript is awesome".length);
-console.log("JavaScript is awesome".toUpperCase());
-
-const quantity = 17;
-console.log(typeof quantity);
-
-const username = "Mango";
-console.log("Username is ", username);
-
-const x = 5;
-const y = 10;
-const z = 5;
-
-const valueB = "random string";
-console.log(Number(valueB)); // NaN
-console.log(typeof Number(valueB)); // "number"
+const a = ['mango'];
+const b = a;
+console.log(a === b);
