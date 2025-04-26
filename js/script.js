@@ -57,7 +57,6 @@ for (const key in book) {
 }
 
 
-
 // Функція вищого порядку
 function registerGuest(name, callback) {
   console.log(`Реєструємо гостя ${name}.`);
