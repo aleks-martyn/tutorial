@@ -57,6 +57,7 @@ ul {
 }
 
 .page-header {
+  position: relative;
   border-bottom: 1px solid red;
 }
 
@@ -73,12 +74,22 @@ ul {
 }
 
 .nav-list {
-  display: flex;
-  gap: 20px;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background-color: palegoldenrod;
+  z-index: 2;
+}
+
+.nav-list.is-open {
+  display: block;
 }
 
 .nav-link {
-  color: white;
+  color: black;
 }
 
 .menu-button {
@@ -86,12 +97,24 @@ ul {
   margin: 0;
   padding: 0;
   border: none;
-  color: #fff;
+  color: white;
   background-color: transparent;
 }
 
 .icon {
   fill: currentColor;
+}
+
+.menu-button .icon-cross {
+  display: none;
+}
+
+.menu-button.is-open .icon-cross {
+  display: block;
+}
+
+.menu-button.is-open .icon-menu {
+  display: none;
 }
 
 /* ---radio buttons--- */

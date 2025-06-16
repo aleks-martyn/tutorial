@@ -15,21 +15,33 @@
     <header class="page-header">
       <div class="header-container">
         <nav class="nav">
-          <ul class="nav-list">
+          <ul class="nav-list" id="nav-list" data-menu>
             <li><a class="nav-link" href="./works.html">Works</a></li>
             <li><a class="nav-link" href="./index.html">Contacts</a></li>
             <li><a class="nav-link" href="./index.html">Features</a></li>
           </ul>
 
-          <button class="menu-button" type="button">
+          <button
+            class="menu-button"
+            data-menu-button
+            type="button"
+            aria-expanded="false"
+            aria-controls="nav-list"
+          >
             <svg
               class="icon"
               width="40"
               height="40"
               aria-label="Перемикач мобільного меню"
             >
-              <use href="./images/icons.svg#icon-close-40px"></use>
-              <use href="./images/icons.svg#icon-menu-40px"></use>
+              <use
+                class="icon-cross"
+                href="./images/icons.svg#icon-close-40px"
+              ></use>
+              <use
+                class="icon-menu"
+                href="./images/icons.svg#icon-menu-40px"
+              ></use>
             </svg>
           </button>
         </nav>
@@ -119,6 +131,7 @@
         </div>
       </section>
     </main>
+    <script src="js/menu.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
