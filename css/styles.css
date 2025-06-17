@@ -56,6 +56,16 @@ ul {
   list-style: none;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
 .page-header {
   position: relative;
   border-bottom: 1px solid red;
