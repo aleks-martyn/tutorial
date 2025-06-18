@@ -83,6 +83,12 @@ ul {
   align-items: center;
 }
 
+.logo {
+  padding: 5px;
+  color: #181818;
+  background-color: #fff;
+}
+
 .nav-list {
   display: none;
   position: absolute;
@@ -96,6 +102,10 @@ ul {
 
 .nav-list.is-open {
   display: block;
+}
+
+.nav-list_item:not(:last-child) {
+  margin-bottom: 20px;
 }
 
 .nav-link {
