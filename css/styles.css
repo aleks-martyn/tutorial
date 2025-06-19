@@ -74,7 +74,25 @@ ul {
 .header-container {
   margin-inline: auto;
   padding-inline: 15px;
-  width: 1200px;
+  width: 100%;
+}
+
+@media screen and (min-width: 480px) {
+  .header-container {
+    max-width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header-container {
+    max-width: 768px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .header-container {
+    max-width: 1280px;
+  }
 }
 
 .nav {
@@ -84,32 +102,48 @@ ul {
 }
 
 .logo {
-  padding: 5px;
+  padding: 11px;
   color: #181818;
   background-color: #fff;
 }
 
-.nav-list {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  padding: 20px;
-  background-color: palegoldenrod;
-  z-index: 2;
+@media screen and (max-width: 767px) {
+  .nav-list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    background-color: palegoldenrod;
+    z-index: 2;
+  }
+
+  .nav-list.is-open {
+    display: block;
+  }
+
+  .nav-list_item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .nav-link {
+    color: black;
+  }
 }
 
-.nav-list.is-open {
-  display: block;
-}
+@media screen and (min-width: 768px) {
+  .nav-list {
+    display: flex;
+    gap: 20px;
+    flex-grow: 1;
+    justify-content: center;
+  }
 
-.nav-list_item:not(:last-child) {
-  margin-bottom: 20px;
-}
-
-.nav-link {
-  color: black;
+  .nav-link {
+    color: #fff;
+  }
 }
 
 .menu-button {
@@ -119,6 +153,12 @@ ul {
   border: none;
   color: white;
   background-color: transparent;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-button {
+    display: none;
+  }
 }
 
 .icon {
@@ -145,8 +185,28 @@ ul {
 
 .container {
   margin-inline: auto;
-  padding-inline: 88px;
-  width: 768px;
+  padding-inline: 72px;
+  width: 100%;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    max-width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding-inline: 88px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+    padding-inline: 124px;
+  }
 }
 
 .list {
@@ -206,16 +266,23 @@ ul {
 }
 
 .image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  width: 148px;
-  border-radius: 1rem;
-  transform-origin: 40px 14px;
-  rotate: -16deg;
-  opacity: 0;
-  pointer-events: none;
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .image {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 148px;
+    border-radius: 1rem;
+    transform-origin: 40px 14px;
+    rotate: -16deg;
+    opacity: 0;
+    pointer-events: none;
+  }
 }
 
 .input:checked + .label > .image {
