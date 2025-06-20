@@ -324,3 +324,38 @@ ul {
   position: inherit;
   opacity: 1;
 }
+
+/* ---box-set--- */
+
+.box-set > li {
+  padding-block: 15px;
+  font-size: 2rem;
+  text-align: center;
+  color: #fff;
+  background-color: teal;
+  border-radius: 4px;
+}
+
+@media screen and (max-width: 767px) {
+  .box-set > li:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .box-set {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .box-set > li {
+    flex-basis: calc((100% - 10px) / 2);
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .box-set > li {
+    flex-basis: calc((100% - 2 * 10px) / 3);
+  }
+}
