@@ -265,24 +265,24 @@ ul {
   content: '[ 4 ]';
 }
 
-.image {
-  display: none;
+@media screen and (max-width: 767px) {
+  .image {
+    display: none;
+  }
 }
 
-@media screen and (min-width: 768px) {
-  .image {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    width: 148px;
-    border-radius: 1rem;
-    transform-origin: 40px 14px;
-    rotate: -16deg;
-    opacity: 0;
-    pointer-events: none;
-  }
+.image {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 148px;
+  border-radius: 1rem;
+  transform-origin: 40px 14px;
+  rotate: -16deg;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .input:checked + .label > .image {
