@@ -327,6 +327,18 @@ body.no-scroll {
 
 /* ---box-set--- */
 
+.hero {
+  text-align: center;
+}
+
+.button-open {
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #dc3b5a;
+  border: 0;
+  border-radius: 4px;
+}
+
 .box-set > li {
   padding-block: 15px;
   font-size: 2rem;
