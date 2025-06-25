@@ -26,6 +26,7 @@
 
 body {
   font-family: 'MessinaSansMono-Regular', sans-serif;
+  color: #fff;
   background-color: #181818;
 }
 
@@ -180,7 +181,40 @@ body.no-scroll {
 /* ---radio buttons--- */
 
 .section {
-  padding-block: 40px;
+  padding-block: 30px;
+}
+
+.section_title {
+  margin-bottom: 24px;
+  font-family: 'RightGrotesk-CompactBlack';
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 0.9;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .section {
+    padding-block: 40px;
+  }
+
+  .section_title {
+    margin-bottom: 40px;
+    font-size: 80px;
+    line-height: 1;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .section {
+    padding-block: 60px;
+  }
+
+  .section_title {
+    margin-bottom: 80px;
+    font-size: 160px;
+  }
 }
 
 .container {
@@ -301,7 +335,6 @@ body.no-scroll {
   font-family: 'RightGrotesk-CompactBlack';
   font-size: 2rem;
   line-height: 1;
-  color: #fff;
   text-transform: uppercase;
   transition: color var(--tra);
 }
@@ -315,7 +348,6 @@ body.no-scroll {
   position: absolute;
   font-size: 0.75rem;
   line-height: 1.17;
-  color: #fff;
   text-transform: uppercase;
   opacity: 0;
 }
@@ -343,7 +375,6 @@ body.no-scroll {
   padding-block: 15px;
   font-size: 2rem;
   text-align: center;
-  color: #fff;
   background-color: teal;
   border-radius: 4px;
 }
