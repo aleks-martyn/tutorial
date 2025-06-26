@@ -255,13 +255,19 @@ body.no-scroll {
 .label {
   position: relative;
   display: flex;
-  justify-content: flex-end;
-  padding-block: 18px;
-  padding-right: 18px;
+  padding: 8px;
   background-color: transparent;
-  border-radius: 1rem;
+  border-radius: 0.75rem;
   cursor: pointer;
   transition: background-color var(--tra);
+}
+
+@media screen and (min-width: 768px) {
+  .label {
+    justify-content: flex-end;
+    padding: 18px;
+    border-radius: 1rem;
+  }
 }
 
 .input:checked + .label {
@@ -275,9 +281,12 @@ body.no-scroll {
 
 .label::before {
   content: '[ 1 ]';
-  margin-right: 21px;
-  padding-top: 5px;
+  margin-right: 8px;
   font-family: 'BiroScriptPlus';
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 1.67;
+  text-wrap-mode: nowrap;
   color: #dc3b5a;
   transition: color var(--tra);
 }
@@ -327,13 +336,13 @@ body.no-scroll {
 .text-group {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  width: 335px;
+  gap: 10px;
 }
 
 .question {
   font-family: 'RightGrotesk-CompactBlack';
-  font-size: 2rem;
+  font-weight: 900;
+  font-size: 1.25rem;
   line-height: 1;
   text-transform: uppercase;
   transition: color var(--tra);
@@ -346,6 +355,7 @@ body.no-scroll {
 
 .answer {
   position: absolute;
+  font-weight: 400;
   font-size: 0.75rem;
   line-height: 1.17;
   text-transform: uppercase;
