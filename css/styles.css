@@ -301,6 +301,7 @@ body.no-scroll {
 @media screen and (min-width: 768px) {
   .label::before {
     margin-right: 21px;
+    padding-top: 2px;
     font-size: 1rem;
     line-height: 1.69;
   }
@@ -333,7 +334,6 @@ body.no-scroll {
 }
 
 .image {
-  display: block;
   position: absolute;
   top: 0;
   left: 0;
@@ -349,6 +349,13 @@ body.no-scroll {
 @media screen and (max-width: 767px) {
   .image {
     display: none;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .image {
+    border-radius: 1.69rem;
+    rotate: -8deg;
   }
 }
 
