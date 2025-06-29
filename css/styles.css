@@ -338,7 +338,6 @@ body.no-scroll {
   top: 0;
   left: 0;
   z-index: 1;
-  width: 148px;
   border-radius: 1rem;
   transform-origin: 40px 14px;
   rotate: -16deg;
