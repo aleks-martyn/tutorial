@@ -13,3 +13,31 @@ const colors = [
   { hex: '#795548', rgb: '121,85,72' },
   { hex: '#607d8b', rgb: '96,125,139' },
 ];
+
+const paletteContainer = document.querySelector('.js-palette');
+const cardsMarkup = createColorCardsMarkup(colors);
+
+paletteContainer.insertAdjacentHTML('beforeend', cardsMarkup);
+
+function createColorCardsMarkup(colors) {
+  return colors
+    .map(({ hex, rgb }) => {
+      return `
+  
+      <div class="color-card">
+        <div
+          class="color-swatch"
+          data-hex="${hex}"
+          data-rgb="${rgb}"
+          style="background-color: ${hex}"
+        ></div>
+        <div class="color-meta">
+          <p>HEX: ${hex}</p>
+          <p>RGB: ${rgb}</p>
+        </div>
+      </div>
+    
+  `;
+    })
+    .join('');
+}
