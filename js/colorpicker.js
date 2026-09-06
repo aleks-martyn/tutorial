@@ -19,6 +19,8 @@ const cardsMarkup = createColorCardsMarkup(colors);
 
 paletteContainer.insertAdjacentHTML('beforeend', cardsMarkup);
 
+paletteContainer.addEventListener('click', onPaletteContainerClick);
+
 function createColorCardsMarkup(colors) {
   return colors
     .map(({ hex, rgb }) => {
@@ -40,4 +42,35 @@ function createColorCardsMarkup(colors) {
   `;
     })
     .join('');
+}
+
+function onPaletteContainerClick(evt) {
+  const isColorSwatchEl = evt.target.classList.contains('color-swatch');
+
+  if (!isColorSwatchEl) {
+    return;
+  }
+
+  const swatchEl = evt.target;
+  const parentColorCard = swatchEl.closest('.color-card');
+
+  removeActiveCardClass();
+  addActiveCardClass(parentColorCard);
+  setBodyBgColor(swatchEl.dataset.hex);
+}
+
+function setBodyBgColor(color) {
+  document.body.style.backgroundColor = color;
+}
+
+function removeActiveCardClass() {
+  const currentActiveCard = document.querySelector('.color-card.is-active');
+
+  if (currentActiveCard) {
+    currentActiveCard.classList.remove('is-active');
+  }
+}
+
+function addActiveCardClass(card) {
+  card.classList.add('is-active');
 }
