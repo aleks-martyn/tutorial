@@ -24,10 +24,6 @@ refs.input.addEventListener('input', _.debounce(onFilterChange, 300));
 const listItemsMarkup = createListItemsMarkup(tech);
 populateList(listItemsMarkup);
 
-function createListItemsMarkup(items) {
-  return items.map(item => `<li>${item.label}</li>`).join('');
-}
-
 function onFilterChange(evt) {
   const filter = evt.target.value.toLowerCase();
 
@@ -37,6 +33,10 @@ function onFilterChange(evt) {
 
   const listItemsMarkup = createListItemsMarkup(filteredItems);
   populateList(listItemsMarkup);
+}
+
+function createListItemsMarkup(items) {
+  return items.map(item => `<li>${item.label}</li>`).join('');
 }
 
 function populateList(markup) {
