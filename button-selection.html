@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Button selection</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <style>
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        padding: 8px;
+        background-color: #fff;
+        user-select: none;
+        outline: 1px solid tomato;
+      }
+
+      .tags__item {
+        margin: 4px;
+      }
+
+      .tags__btn {
+        padding: 4px 10px 4px;
+        font-size: 24px;
+        font-weight: 500;
+        color: #212121;
+        white-space: nowrap;
+        text-decoration: none;
+        border: 1px solid #212121;
+        border-radius: 4px;
+        outline: none;
+        cursor: pointer;
+      }
+
+      .tags__btn--active {
+        color: #fff;
+        background-color: #3f51b5;
+      }
+    </style>
+  </head>
+  <body>
+    <p><a href="/index.html">To the main page</a></p>
+
+    <ul class="tags js-tags">
+      <li class="tags__item">
+        <button class="tags__btn" data-value="html">#html</button>
+      </li>
+      <li class="tags__item">
+        <button class="tags__btn" data-value="css">#css</button>
+      </li>
+      <li class="tags__item">
+        <button class="tags__btn" data-value="javascript">#javascript</button>
+      </li>
+      <li class="tags__item">
+        <button class="tags__btn" data-value="npm">#npm</button>
+      </li>
+      <li class="tags__item">
+        <button class="tags__btn" data-value="webpack">#webpack</button>
+      </li>
+      <li class="tags__item">
+        <button class="tags__btn" data-value="react">#react</button>
+      </li>
+      <li class="tags__item">
+        <button class="tags__btn" data-value="redux">#redux</button>
+      </li>
+      <li class="tags__item">
+        <button class="tags__btn" data-value="nodejs">#nodejs</button>
+      </li>
+    </ul>
+
+    <script src="js/button-selection.js" type="module"></script>
+  </body>
+</html>

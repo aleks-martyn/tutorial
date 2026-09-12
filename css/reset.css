@@ -1,0 +1,59 @@
+/* 1. Налаштовуємо правильну модель розрахунку розмірів блоків (включно з padding та border) */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Прибираємо дефолтні зовнішні відступи (margin) для основних елементів */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* 3. Налаштовуємо базові стилі для body */
+body {
+  line-height: 1.5; /* Покращує читабельність тексту */
+  -webkit-font-smoothing: antialiased; /* Робить шрифти плавнішими на macOS */
+}
+
+/* 4. Робимо медіа-елементи гнучкими та адаптивними */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* 5. Унаслідуємо шрифти для елементів форм (вони не унаслідуються автоматично) */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 6. Прибираємо стандартне підкреслення та маркери, якщо потрібно */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* 7. Дозволяємо перенесення довгих слів, щоб текст не ламав верстку */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
