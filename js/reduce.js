@@ -18,15 +18,25 @@ const getTags = tweets =>
 const tags = getTags(tweets);
 console.log(tags);
 
-const getTagStats = (acc, tag) => {
+/* const getTagStats = (acc, tag) => {
   if (!Object.hasOwn(acc, tag)) {
-    acc[tag] = 0;
+    return {
+      ...acc,
+      [tag]: 1,
+    };
   }
 
-  acc[tag] += 1;
-
-  return acc;
+  return {
+    ...acc,
+    [tag]: acc[tag] + 1,
+  };
 };
+цю функцію можна оптимізувати з допомогою тернарного оператора*/
+
+const getTagStats = (acc, tag) => ({
+  ...acc,
+  [tag]: Object.hasOwn(acc, tag) ? acc[tag] + 1 : 1,
+});
 
 const countTags = tags => tags.reduce(getTagStats, {});
 
