@@ -71,11 +71,6 @@ registerGuest('Манго', function greet(name) {
 const isRecipientAvailable = Math.random() > 0.5;
 console.log(isRecipientAvailable);
 
-const numbersus = [5, 10, 15, 20, 25];
-numbersus.forEach((number, index, array) =>
-  console.log(`Індекс ${index}, значення ${number}, значення ${array}`)
-);
-
 const fruits = [
   { name: 'apples', amount: 100 },
   { name: 'bananas', amount: 0 },
