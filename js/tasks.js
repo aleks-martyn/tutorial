@@ -70,12 +70,3 @@ registerGuest('Манго', function greet(name) {
 
 const isRecipientAvailable = Math.random() > 0.5;
 console.log(isRecipientAvailable);
-
-const fruits = [
-  { name: 'apples', amount: 100 },
-  { name: 'bananas', amount: 0 },
-  { name: 'grapes', amount: 50 },
-];
-
-const anyAvailable = fruits.some(({ amount }) => amount > 0);
-console.log(anyAvailable);
