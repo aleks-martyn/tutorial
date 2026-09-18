@@ -2,7 +2,7 @@ const total = [2, 7, 3, 14, 6].reduce((previousValue, number) => {
   return previousValue + number;
 });
 
-console.log(total);
+// console.log(total); // 32
 
 const tweets = [
   { id: '000', likes: 5, tags: ['js', 'nodejs'] },
@@ -16,7 +16,7 @@ const getTags = tweets =>
   tweets.reduce((allTags, tweet) => [...allTags, ...tweet.tags], []);
 
 const tags = getTags(tweets);
-console.log(tags);
+// console.log(tags); // ['js', 'nodejs', 'html', 'css', 'html', 'js', 'nodejs', 'css', 'react', 'js', 'nodejs', 'react']
 
 /* const getTagStats = (acc, tag) => {
   if (!Object.hasOwn(acc, tag)) {
@@ -41,4 +41,4 @@ const getTagStats = (acc, tag) => ({
 const countTags = tags => tags.reduce(getTagStats, {});
 
 const tagCount = countTags(tags);
-console.log(tagCount);
+// console.log(tagCount); // {js: 3, nodejs: 3, html: 2, css: 2, react: 2}

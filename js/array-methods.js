@@ -10,4 +10,4 @@ const fruits = [
 ];
 
 const anyAvailable = fruits.some(({ amount }) => amount > 0);
-console.log(anyAvailable);
+// console.log(anyAvailable);
