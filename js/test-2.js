@@ -22,5 +22,3 @@ const makeListItems = (items, callback) => items.map(callback);
 const listItems = makeListItems(ingredients, createListItemEl);
 
 listEl.append(...listItems);
-
-console.log(listEl);
