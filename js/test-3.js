@@ -15,14 +15,13 @@ const images = [
 
 const listEl = document.querySelector('.gallery');
 
-const makeGalleryMarkup = items => {
+const makeGalleryMarkup = items =>
   items
     .map(
       ({ url, alt }) =>
         `<li class="gallery-item"><img class="gallery-image" src="${url}" alt="${alt}"/></li>`
     )
     .join('');
-};
 
 const galleryMarkup = makeGalleryMarkup(images);
 
