@@ -4,11 +4,6 @@ const outputEl = document.querySelector('#name-output');
 inputEl.addEventListener('input', onInputChange);
 
 function onInputChange(e) {
-  outputEl.textContent = !e.target.value.trim()
-    ? 'Anonymous'
-    : e.target.value.trim();
-
-  //   if (!e.target.value.trim().length) {
-  //     outputEl.textContent = 'Anonymous';
-  //   }
+  const inputText = e.target.value.trim();
+  outputEl.textContent = !inputText ? 'Anonymous' : inputText;
 }
