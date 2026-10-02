@@ -16,6 +16,18 @@
       .gallery-image {
         width: 320px;
       }
+
+      #validation-input {
+        border: 3px solid #bdbdbd;
+      }
+
+      #validation-input.valid {
+        border-color: #4caf50;
+      }
+
+      #validation-input.invalid {
+        border-color: #f44336;
+      }
     </style>
   </head>
   <body>
@@ -66,6 +78,13 @@
     <input type="text" id="name-input" placeholder="Please enter your name" />
     <h1>Hello, <span id="name-output">Anonymous</span>!</h1>
 
+    <input
+      type="text"
+      id="validation-input"
+      data-length="6"
+      placeholder="Please enter 6 symbols"
+    />
+
     <script src="js/tasks.js" type="module"></script>
     <script src="js/array-methods.js" type="module"></script>
     <script src="js/reduce.js" type="module"></script>
@@ -74,5 +93,6 @@
     <script src="js/test-3.js" type="module"></script>
     <script src="js/test-4.js" type="module"></script>
     <script src="js/test-5.js" type="module"></script>
+    <script src="js/test-6.js" type="module"></script>
   </body>
 </html>
