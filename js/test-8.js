@@ -8,10 +8,10 @@ function onFormSubmit(e) {
   const {
     elements: { email, password },
   } = form;
-  const emailValue = email.value;
-  const passwordValue = password.value;
+  const emailValue = email.value.trim();
+  const passwordValue = password.value.trim();
 
-  if (emailValue === '' || passwordValue.trim() === '') {
+  if (emailValue === '' || passwordValue === '') {
     alert('All fields must be filled in!');
     return;
   }
