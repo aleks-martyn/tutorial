@@ -5,14 +5,38 @@ const inputEl = controlsEl.firstElementChild;
 const createBtnEl = document.querySelector('button[data-create]');
 const destroyBtnEl = document.querySelector('button[data-destroy]');
 const boxesEl = document.querySelector('#boxes');
+let boxesAmount = 0;
 
 inputEl.addEventListener('input', onInputChange);
+createBtnEl.addEventListener('click', onCreateBtnClick);
+destroyBtnEl.addEventListener('click', onDestroybtnClick);
 
 function onInputChange(e) {
-  const boxesAmount = Number(e.target.value);
+  boxesAmount = Number(e.target.value);
+}
+
+function onCreateBtnClick() {
   createBoxes(boxesAmount);
 }
 
+function onDestroybtnClick() {
+  boxesEl.innerHTML = '';
+  inputEl.value = '';
+}
+
 function createBoxes(amount) {
-  console.log(amount);
+  if (!amount) {
+    return;
+  }
+
+  const boxes = [];
+
+  for (let i = 1; i <= amount; i += 1) {
+    boxes.push(
+      `<div style="width: 10px; height: 10px; background-color: red"></div>`
+    );
+  }
+
+  const boxesMarkup = boxes.join('');
+  boxesEl.innerHTML = boxesMarkup;
 }
