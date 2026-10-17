@@ -5,7 +5,7 @@ const inputEl = controlsEl.firstElementChild;
 const createBtnEl = document.querySelector('button[data-create]');
 const destroyBtnEl = document.querySelector('button[data-destroy]');
 const boxesEl = document.querySelector('#boxes');
-let boxesAmount = 0;
+let boxesAmount = null;
 
 inputEl.addEventListener('input', onInputChange);
 createBtnEl.addEventListener('click', onCreateBtnClick);
@@ -22,6 +22,7 @@ function onCreateBtnClick() {
 function onDestroybtnClick() {
   boxesEl.innerHTML = '';
   inputEl.value = '';
+  boxesAmount = null;
 }
 
 function createBoxes(amount) {
