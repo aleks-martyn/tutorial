@@ -31,10 +31,11 @@ function createBoxes(amount) {
   }
 
   const boxes = [];
+  let size = 20;
 
   for (let i = 1; i <= amount; i += 1) {
     const bgColor = getRandomHexColor();
-    const size = 20;
+    size += 10;
 
     boxes.push(
       `<div style="width: ${size}px; height: ${size}px; background-color: ${bgColor}"></div>`
