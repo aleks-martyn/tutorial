@@ -33,8 +33,11 @@ function createBoxes(amount) {
   const boxes = [];
 
   for (let i = 1; i <= amount; i += 1) {
+    const bgColor = getRandomHexColor();
+    const size = 20;
+
     boxes.push(
-      `<div style="width: 10px; height: 10px; background-color: red"></div>`
+      `<div style="width: ${size}px; height: ${size}px; background-color: ${bgColor}"></div>`
     );
   }
 
