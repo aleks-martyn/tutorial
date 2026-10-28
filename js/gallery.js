@@ -7,7 +7,16 @@ galleryEl.insertAdjacentHTML('beforeend', galleryMarkup);
 
 galleryEl.addEventListener('click', onGalleryClick);
 
-function onGalleryClick(event) {  
+function onGalleryClick(e) {
+  if (e.target.nodeName !== 'IMG') {
+    return;
+  }
+
+  e.preventDefault();
+
+  const largeImageURL = e.target.dataset.source;
+  console.log(largeImageURL);
+}
 
 function createGalleryMarkup(items) {
   return items
