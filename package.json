@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/aleks-martyn/tutorial/issues"
   },
-  "homepage": "https://github.com/aleks-martyn/tutorial#readme"
+  "homepage": "https://github.com/aleks-martyn/tutorial#readme",
+  "dependencies": {
+    "basiclightbox": "^5.0.4"
+  }
 }
