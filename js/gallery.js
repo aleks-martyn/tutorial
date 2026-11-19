@@ -15,7 +15,12 @@ function onGalleryClick(e) {
   e.preventDefault();
 
   const largeImageURL = e.target.dataset.source;
-  console.log(largeImageURL);
+
+  const instance = basicLightbox.create(`
+    <img src="${largeImageURL}" width="800" height="600">
+`);
+
+  instance.show();
 }
 
 function createGalleryMarkup(items) {
